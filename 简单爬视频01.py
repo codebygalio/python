@@ -1,5 +1,5 @@
 import requests
-import re  # 正则表达式模块内置
+import re  # 正则表达式模块，,内置
 
 
 response = requests.get('https://video-qn.ibaotu.com/19/83/83/49Z888piC4I8.mp4')
