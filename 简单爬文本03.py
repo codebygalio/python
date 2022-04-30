@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # 声明此py文件的编码
 import requests
-import re  # 正则表达式模块, 内置
+import re  # 正则表达式模块 内置
 
 
 # 所有静态网页请求的方法都是 get
