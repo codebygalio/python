@@ -11,3 +11,4 @@ data = response.content  # 二进制数据提取
 
 with open('视频.mp4', mode='wb') as f:  # 二进制数据没有编码
     f.write(data)
+print('test')
