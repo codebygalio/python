@@ -1,0 +1,1270 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>我的管理首页</title>
+<link href="//www1.pcbaby.com.cn/sns/style/admin.css" rel="stylesheet"
+	type="text/css" />
+<script class=" defer" src="//www.pcbaby.com.cn/ssi/js/sns/index.html"
+	charset="gb2312" type="text/javascript"></script>
+
+	<script src="//www1.pcbaby.com.cn/sns/js/jquery.min.full.js"
+		type="text/javascript"></script>
+
+<script src="/js/jquery.js"></script>
+<script src="/user/js/online.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- 加入头部导航 -->
+
+    <img src="//my.pcbaby.com.cn/pcbaby_sns_online.jpg?uid=51222353" border=0 width=0 height=0>
+
+
+
+
+
+
+
+ 
+
+<script>var getCountRoot = "//my.pcbaby.com.cn";</script>
+<script src="/user/js/msg.js"></script>
+<script>jQuery(function(){getMsgCount("","1")})</script>
+
+<script>if(!window._addIvyID)document.write("<script src=//www.pconline.com.cn/_hux_/baby/sns/index.js><\/script>")</script>
+
+<div id="ivy_div" style="display: none;">
+<script>setTimeout(function(){var js=document.createElement("script"); js.src="//jwz.3conline.com/adpuba/baby_mykids_show?id=pckids.qz.test15.&media=js&channel=dynamic&";document.getElementsByTagName("head")[0].appendChild(js);},999)</script>
+</div>
+
+<script src="//www.pcbaby.com.cn/global/sns_navibar/index.html"></script>
+
+
+<div class="wrap" id="idWrapId"><!-- 加入一级导航 --> 
+<div class="nav">
+<div class="logo"><a href="//my.pcbaby.com.cn" target="_self" title="亲子部落">亲子部落</a></div>
+<div class="navText"><a href="/user/adminIndex.jsp">管理中心</a><a href="/user/accountInfo.jsp">我的档案</a><a href="/user/msg.jsp">消息中心</a><a href="//my.pcbaby.com.cn/collection/channel.html" target="_blank">我的收藏</a><a href="/user/myfriend.jsp">我的好友</a><a href='//my.pcbaby.com.cn/51222353/' target="_blank" class="noR">进入小家</a></div>
+
+<form id="mainSNSSearchFromId" onsubmit="setFormAction();return false;" method="post" target="_blank">
+
+<div class="navInput">
+	<span class="myName"> <input type="text" name="searchWord" value="我要查找..."  onfocus="value=''"/></span>
+		<div class="Simulation">
+		<select name="snsSearchType" id="snsSearchTypeId" >
+		<option value="all" selected="selected">亲子部落</option>
+		<option value="friend">好友</option>
+		<option value="diary">日记</option>
+		<option value="album">相册</option>
+		<option value="video">视频</option>
+		<option value="information">亲子资讯</option>
+		<option value="bbs">论坛</option>
+		<option value="k">快问</option>
+		<!-- <option value="group">圈子</option> -->
+		<option value="groupTopic">话题</option>
+	</select>
+	</div>
+	<input class="go"  type="button" name="Submit" onclick="setFormAction();return false;" value="" />
+</div>
+
+</form>
+<script type="text/javascript">
+setSelect('snsSearchTypeId');
+function setFormAction(){
+	var form = document.getElementById("mainSNSSearchFromId");
+	form.action = "//my.pcbaby.com.cn/search/"+ document.getElementById("snsSearchTypeId").value +"/";
+	form.submit();
+}
+</script>
+</div>
+
+
+
+
+
+
+ 
+
+    <link href="//www1.pcbaby.com.cn/sns/style/admin.css" rel="stylesheet" type="text/css" />
+
+    <div class="banner">
+        <div class="dText"><i class="tit"><a href="//my.pcbaby.com.cn/user/accountInfoModify.jsp?modify=all&logo=modify" target="_blank">轻松完成，成为有头有脸的人物！</a></i></div>
+        <div class="dBtn"><a href="//my.pcbaby.com.cn/user/accountInfoModify.jsp?modify=all&logo=modify" target="_blank">上传头像</a>提交时，请使用真实头像！</div>
+        <a href="javascript:void(0)" class="close" title="关闭">关闭</a>
+    </div>
+
+<script>
+    $(".close").click(function(){
+        $(this).parent(".banner").hide();
+    })
+    
+    function checkComplete(num){
+        jQuery.post("//my.pcbaby.com.cn/intf/checkBbsStatistics.jsp", {"num":num}, function(data){
+            data=eval("code="+data);
+            if(data.result==1){
+                location.reload();
+            }else{alert("对不起，您还未完成论坛任务");}
+        });
+    }
+</script>
+
+<div class="main">
+<!-- 加入左侧组件导航 -->
+
+
+
+
+
+
+
+ 
+
+<script type="text/javascript">
+<!--
+function openAndCoutComponent(id,homePage){
+	$.getScript("//my.pcbaby.com.cn/user/component/component/accountComponentStat.jsp?id="+id,function(){
+		window.location.href=homePage;
+	});
+}
+//-->
+</script>
+<div class="left159">
+<ul class="leftNav">
+<!--<li class="nav1"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/homeLayout.jsp" target="_blank">个性化主页</a></li>-->
+<li class="nav1"><span class="icon"></span><a href="//my.pcbaby.com.cn/51222353/" target="_blank" onclick="openHomeLayout();return true;">装扮小家</a></li>
+<li class="nav2"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/diarylist.jsp">日记</a><span class="add"><a href="//my.pcbaby.com.cn/user/diaryform.jsp">撰写</a></span></li>
+<li class="nav3"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/albumList.jsp">相册</a><span class="add"><a href="//my.pcbaby.com.cn/user/uploadPhoto.jsp">上传</a></span></li>
+<li class="nav3"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/photoLibList.jsp">图库</a><!--<span class="add"> <a href="//uppic.pconline.com.cn/pcbaby.jsp">上传</a> </span>--></li>
+<li class="nav4"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/videoList.jsp">视频</a><span class="add"><a href="//my.pcbaby.com.cn/user/uploadVideo.jsp">上传</a></span></li>
+
+<li class="nav6"><span class="icon"></span><a href="//bbs.pcbaby.com.cn/" target="_blank">论坛</a><span class="add"><a href="//my.pcbaby.com.cn/user/myGroupPost.jsp">我的论坛</a></span></li>
+<li class="nav7"><span class="icon"></span><a href="//k.pcbaby.com.cn" target="_blank">快问</a><span class="add"><a href="//my.pcbaby.com.cn/user/templates/k/baby/k.jsp?tab=question">我的快问</a></span></li>
+
+
+<li class="nav23"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/star/star_hotpeople.jsp">部落达人馆</a></li>
+<li class="nav32"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/component/health/myOverview.jsp">健康帮</a><span class="newApp"></span></li>
+<!--<li class="nav30"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/component/book/book_news.jsp">宝宝知库</a></li>-->
+
+<li class="nav19"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/tryout/underwayTry.jsp" target="_self">免费试用</a></li>
+
+
+<li class="nav21"><span class="icon"></span><a href="//product.pcbaby.com.cn" target="_blank">母婴用品库</a></li>
+
+<li class="nav8"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/intelligentRecommend.jsp">小V妈推荐</a></li>
+
+<li class="nav11"><span class="icon"></span><a href="javascript:void(0)" onclick="openAndCoutComponent(9251645,'/collection/channel.html');return false;">收藏
+</a>
+</li>
+
+<li class="nav13"><span class="icon"></span><a href="javascript:void(0)" onclick="openAndCoutComponent(9251646,'/user/job.jsp');return false;">积分任务
+</a>
+</li>
+
+<li class="nav20"><span class="icon"></span><a href="javascript:void(0)" onclick="openAndCoutComponent(9251647,'http://www.pcbaby.com.cn/tools/');return false;">实用工具
+</a>
+</li>
+
+<li class="nav35"><span class="icon"></span><a href="//my.pcbaby.com.cn/user/accountLimits.jsp">账户权限</a></li>
+</ul>
+
+<div class="navAdd">
+<span class="line1"></span>
+<span class="line2"></span>
+<span class="iconList"><em class="icon"></em><a href="//my.pcbaby.com.cn/user/component/component/list.jsp">组件管理</a></span>
+</div>
+
+<div class="navAdd">
+<span class="line1"></span>
+<span class="line2"></span>
+<span class="iconList add"><em class="icon2"></em><a href="//my.pcbaby.com.cn/suggestin_box/" target="_blank">阿拉丁意见箱</a></span></div>
+<script src="//my.pcbaby.com.cn/user/js/P.js"></script>
+<script>
+function openHomeLayout(){
+	P.setCookie("openHomeLayout","1");
+}
+</script>
+</div>
+	<div class="right841">
+	<div class="usreMain">
+	<!-- 公告 -->
+	
+
+
+
+
+
+
+ 
+
+<div class="userNote">
+<span>系统公告：</span>
+<div class="scroll">
+<ul class="items">
+
+<li></li>
+
+
+</ul>
+</div>
+<div class="actions">
+<a href="javascript:showBull('0')" class="prev"></a>
+<a href="javascript:showBull('1')" class="next"></a>
+</div>
+<!-- 间歇滚动插件 -->
+<script src="//www1.pcbaby.com.cn/sns/js/jquery.tools.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+$(".scroll").scrollable({ vertical: true ,circular: true}).autoscroll({interval: 3000});
+});
+</script>
+</div>
+
+<script>
+function showBull(id){
+	var o = document.getElementById("userNews"+id);
+	if(o){
+		closeAll();
+		o.style.display = "";
+	}
+}
+
+function closeUserNews(){
+	PCDialog.open("确定删除公告","iframe:/user/module/delUserNews.jsp","380","170");
+}
+
+function closeUserNews1(){		
+	if(confirm("确定关闭?")){
+	jQuery.ajax({
+		type:"POST",
+		url:"/user/module/userNewsJson.jsp",
+		data:"id=51222353",
+		async:false,
+		dataType:"json",
+		success:function(data){			
+			if(data.status==0){			
+				closeAll();					
+			}else{
+				alert(data.desc);
+			}
+		},
+		error:function(){
+			alert("网络有问题,请稍后再试!");
+		}
+	});
+	} // end if		
+}
+
+function closeAll(){
+	$(".announceMid").each(function(){this.style.display = "none";});
+}
+</script>
+
+	<!-- 加入用户基本信息模块 -->
+	
+<script>
+
+function showAndHide(o){
+	var obj = document.getElementById(o);
+	if(obj.style.display == "none"){
+	obj.style.display = "";
+	} else {
+	obj.style.display = "none";
+	}
+}
+
+jQuery(function(){
+	
+	jQuery("#yesBtn").click(function(){
+	  if(!checkEdit()) return;
+	  jQuery.ajax({ 
+      url: "//my.pcbaby.com.cn/user/action/account/accountStateDo.jsp",
+      type: "POST",
+      data: {state: jQuery("#state").val()},
+      cache: false, 
+      success: function(data){
+        if(data.indexOf("ok")!=-1){
+        	window.location.reload();
+        }else{
+        	alert(data);
+        }
+      }
+    });
+	});	
+});
+function submit(){
+	jQuery("#yesBtn").click(function(){
+		  if(!checkEdit()) return;
+		  jQuery.ajax({ 
+	      url: "//my.pcbaby.com.cn/user/action/account/accountStateDo.jsp",
+	      type: "POST",
+	      data: {state: jQuery("#state").val()},
+	      cache: false, 
+	      success: function(data){
+	        if(data.indexOf("ok")!=-1){
+	        	window.location.reload();
+	        }else{
+	        	alert(data);
+	        }
+	      }
+	    });
+		});	
+}
+function checkEdit(){
+	var state=jQuery("#state").val();
+	if(state.length==0){
+    	alert("请输入内容")
+    	return false;
+	}
+	if(state=="更新状态，让好友知道您在做什么"){
+    	alert("请输入内容")
+    	return false;
+	}
+	if(state.replace(/[^\x00-\xff]/g,"**").length>120){
+    	alert("输入内容太长(60个字内)");
+    	return false;
+	}
+
+	return true;
+
+}
+
+$(function(){
+	
+	$("#theScoreTagTipsId").hover(function(){$("#dPop").show()},function(){$("#dPop").hide();});/*红包提示*/
+	
+	$("#theScoreTagTipsId").html("<i class='mListL'><a href='javascript:void(0);' onclick='toFetchScore();return false;'>领取今日红包</a></i><i class='mListR'><i class='fen'>0个积分</i></i>");
+	
+	$("#dPop").html("<span>连续登陆领取每天+<em>5</em>,最多可达<em>35</em>;若中断,又从<em>5</em>开始.</span><em class='doc'></em>");
+	
+});
+function toFetchScore(){
+	$.ajax({
+		type: "POST",
+		url: "//my.pcbaby.com.cn/user/module/_toFetchDateScore.jsp",
+		//async:false,
+		dataType:"json",
+		data: {addScore:0},
+		success: function(data){
+			alert(data.msg);
+			if(data.code == 1){
+				$("#_st_totalSorce51222353").html(data.score);
+				$("#theScoreTagTipsId").addClass("lt1");
+				$("#theScoreTagTipsId").html("<i class='mListL' id='mFinish'><a href='javascript:void(0);'>今日红包已领取</a></i><i class='mListR'>0个积分</i>");
+				
+				$("#dPop").html("<span>明天可以领<em> 0 </em>分,记得来领取哦. </span><em class='doc'></em>");
+				
+			}
+		}
+	});
+}
+
+</script>
+
+<div class="userInfo">
+<div class="dPic">
+<i class="iPic"><a href="//my.pcbaby.com.cn/51222353/" target="_blank"><img alt="mb51222353" src="//i1.3conline.com/images/upload/upc/face/51/22/23/53/51222353_120x120" id="accountLogo" /></a></i>
+<i class="iChange"><a href="//my.pcbaby.com.cn/user/accountInfoModify.jsp?modify=all&logo=modify" target="_blank">修改头像</a></i>
+</div>
+<div class="dEdit">
+
+<span class="sOld">今天宝宝说……</span><span class="sMore"></span>
+
+<div class="editS"><input type="text" id="state" onfocus="value=''"  name="state" value="今天宝宝说了哪些有趣的话呢？" /><a class="close">收起</a><input type="submit" class="btn" value="发 布" id="yesBtn" /></div>
+
+<li >宝宝： <span class="userColor">备孕中</span></li>
+
+<div class="sysNote">
+系统通知：(<i class="error" id="notice_pId"><a href="/user/notice.jsp" target="_self"><span id="noticeId" style="color:gray;text-decoration:none">0条新</span></a></i>)  
+	   留言：(<i class="error"  id="messageRe_pId"><a href="/user/message.jsp" target="_self"><span id="messageReId2" style="color:gray;text-decoration:none">0条新</span></a></i>)  
+	   评论：(<i class="error" id="commentRe_pId"><a href="/user/comment.jsp?receive=all" target="_self"><span id="commentReId2" style="color:gray;text-decoration:none">0条新</span></a></i>)  
+	   短消息：(<i class="error"  id="sms_pId"><a href="/user/sms.jsp" target="_self"><span id="smsId" style="color:gray;text-decoration:none">0条新</span></a></i>)
+</div>
+
+</div>
+<script type="text/javascript">
+$(function(){
+$(".editS input[type='text']").focus(function(){$(".editS").addClass("editB");$(".sysNote").hide()});
+$(".close").click(function(){$(".editS").removeClass("editB");$(".sysNote").show()});
+});
+</script>
+</div>
+
+
+	<!-- 育儿资讯 -->
+	
+
+<!-- 用户的有宝宝或者怀孕期 -->
+
+<!-- 没有宝宝 -->
+
+<div class="modBoxG">
+<div class="thG">
+<span class="mark">你还没有宝宝</span>
+<span class="subMark"><a href="/user/accountInfo.jsp" target="_blank">修改资料</a></span>
+</div>
+<div class="tbG">
+<div class="expPicG">
+<i class="iPic"><a href="http://huaiyun.pcbaby.com.cn/yunqian/" target="_blank"><img src="http://img3.pcbaby.com.cn/pcbaby/huaiyun/yunqian/1009/CFP389625337.jpg" /></a></i><i class="iDes"><p>夫妻中如果只有一方带有<a href="http://www.pcbaby.com.cn/qzbd/hyjbbk/1008/953694.html" target="_blank">地中海型贫血</a>的基因，则胎儿不会有严重或致命的后果。然而若双方都带有隐性基因时，胎儿有1/4的几率可能得到严重或致命的贫血，1/2的几率和双亲一样带有基因，但不至于致命或严重影响健康。所以孕妇的第一次<a href="http://www.pcbaby.com.cn/qzbd/hyshbk/yqijcqjzq/" target="_blank">产检</a>是很重要的。</p><em><a href="http://huaiyun.pcbaby.com.cn/yunqian/" target="_blank">查看详情>></a></em></i>
+<i class="iLink">今日头条:
+<script type="text/javascript" src="//www.pcbaby.com.cn/mykids/snsindex/1009/intf161.js"></script>
+<script type="text/javascript" src="//www.pcbaby.com.cn/mykids/snsindex/1009/intf166.js"></script></i>
+</div>
+</div>
+<div class="tbm"></div>
+</div>
+
+
+	<!-- 加入圈子 -->
+	
+
+
+
+
+
+
+ 
+
+<link href="//www1.pcbaby.com.cn/sns/style/admin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+function createFaceUrl(id,suffix){
+	var no = parseInt(id) % 5;
+	if(no == 0){
+		no = 5;}
+	var dId = (""+id).replace(/(\d\d)/g,"$1/");
+	if((""+id).length % 2 == 0){
+		dId += id;
+	}else{
+		dId += ("/"+id);
+	}
+	no=1;
+	var theUrl = '//i'+no+'.3conline.com/images/upload/upc/face/'+dId+'_'+suffix;
+	return theUrl;
+}
+//新鲜事sh
+function setFeed(){
+	parent.PCDialog.open('新鲜事设置','iframe://my.pcbaby.com.cn/user/setFeed.jsp','500','500');
+	return false;
+}
+function setSelfHeight(){
+	if(parent.window.fixIframeHeight){
+		   parent.window.fixIframeHeight(0);
+		   parent.window.fixIframeHeight(getScrollHeight());
+	} 
+}
+function getScrollHeight(){  
+  var yScroll;  
+  if (window.innerHeight && window.scrollMaxY) {  
+    yScroll = window.innerHeight + window.scrollMaxY;
+  } else if (document.body.scrollHeight > document.body.offsetHeight){ // all but Explorer Mac
+    yScroll = document.body.scrollHeight;
+  } else { // Explorer Mac...would also work in Explorer 6 Strict, Mozilla and Safari
+    yScroll = document.body.offsetHeight;
+  }
+  return yScroll;
+}
+
+jQuery(function(){
+	   setSelfHeight();
+		var type='8';//'2';
+		doNewsFeedType(type);
+		//doNewsFeedSameAge(type);
+		featuredcontentslider.init({
+			id: "tTab0", //指定ID
+			contentsource: ["inline", ""], //有效值: ["inline", ""] 嵌入html or ["ajax", "path_to_file"] 嵌入utf-8文件
+			toc: "markup", //有效值: "#increment" 标记序号, "markup", ["label1", "label2", etc]标记具体内容
+			nextprev: ["上一条", "下一条"], //标记 for "上一条" and "下一条" 设置为 "" 为不出现.
+			revealtype: "mouseover", //鼠标事件有效值: "click" or "mouseover"
+			enablefade: [false, 0.2], //[true/false, 切换褪色度]
+			autorotate: [false, 0], //[true/false, 切换停留时间]
+			onChange: function(previndex, curindex){}
+			})
+});
+</script>
+<div class="frame">
+<div class="newThing">
+<div class="twoTab">
+<div id="paginate-tTab0" class="ddtab pagination">
+<a href="javascript:void(0);" class="toc"  >好友新鲜事</a>
+<a href="javascript:void(0);" class="toc" >同龄新鲜事</a>
+<a href="javascript:void(0);" class="toc" >活动新鲜事</a>
+<span class="addLink"><a href="javascript:void(0);"  onclick="setFeed();">好友新鲜事设置</a></span>
+</div>
+<div id="tTab0" class="sliderwrapper">
+<div class="contentdiv tbody"   style="display:block;">
+
+<div class="conTitle2">
+    <i>新鲜事分类：</i>
+    <i><a href="javascript:void(0);" onclick="doNewsFeedType(0);" id="id0">全部</a></i>
+    
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(1);" id="id1">状态</a></i>
+    	
+        <i><span id=select_id><a href="javascript:void(0);" onclick="doNewsFeedType(2);" id="id2">博客</a></span></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(3);" id="id3">相册</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(4);" id="id4">视频</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(5);" id="id5">互动</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(6);" id="id6">组件</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(7);" id="id7">快问</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(8);" id="id8">论坛</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(10);" id="id10">达人</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(12);" id="id12">点评</a></i>
+    	
+        <i><a href="javascript:void(0);" onclick="doNewsFeedType(9);" id="id9">其他</a></i>
+    	
+</div>
+<div class="conTitle3">
+    精彩内容天天看，<a href="//my.pcbaby.com.cn/mybabyadm/" target="_blank">部落管理员</a>为你新鲜奉上
+</div>
+<ul class="newInfor">
+    <li id="caibian">
+        <div class="pic"><img src="//i1.3conline.com/images/upload/upc/face/93/62/00/9/9362009_50x50" alt="亲子部落管理员" /></div>
+        <div class="des">
+            <script src="//www.pcbaby.com.cn/mykids/snsindex/1009/intf167.js"></script>
+        </div>
+    </li>
+</ul>
+<ul class="newInfor" id="newInfor">
+</ul>
+<p class="pMore" id="pMore" onclick="doNewsFeedType(-1);">查看更多动态↓</p>
+<script type="text/javascript">
+    var CURR_P = 1;
+    var currentType = 2;
+    var MAX_Number=0;
+    function doNewsFeedType(type){
+        var html=$("#select_id").html();
+        $("#select_id").after(html);
+        $("#select_id").remove();
+        $("#id"+type).wrap('<span id=select_id></span>');
+        if(type==-1){
+            type = currentType;
+        }
+        else{
+            CURR_P = 1;
+            currentType = type;
+            MAX_Number=0;
+            $('#newInfor').empty();
+        }
+        var url="//my.pcbaby.com.cn/intf/getNewsfeeds.jsp?cb=?&aid=51222353&pn="+CURR_P;
+        if(type!=0){
+            url+="&p="+type;
+        }else{
+            url=url+"&ps=";
+    
+                url=url+1;
+                if(1<12){
+                    url+=",";
+                }
+    
+                url=url+2;
+                if(2<12){
+                    url+=",";
+                }
+    
+                url=url+3;
+                if(3<12){
+                    url+=",";
+                }
+    
+                url=url+4;
+                if(4<12){
+                    url+=",";
+                }
+    
+                url=url+5;
+                if(5<12){
+                    url+=",";
+                }
+    
+                url=url+6;
+                if(6<12){
+                    url+=",";
+                }
+    
+                url=url+7;
+                if(7<12){
+                    url+=",";
+                }
+    
+                url=url+8;
+                if(8<12){
+                    url+=",";
+                }
+    
+                url=url+10;
+                if(9<12){
+                    url+=",";
+                }
+    
+                url=url+11;
+                if(10<12){
+                    url+=",";
+                }
+    
+                url=url+12;
+                if(11<12){
+                    url+=",";
+                }
+    
+                url=url+9;
+                if(12<12){
+                    url+=",";
+                }
+    
+            }
+            $.getJSON(url,function(data){
+                for(var i=0; i<data.length; i++){
+                    var typeId=data[i].tpyeId;
+                    var createTime=data[i].createTime;
+                    var text=data[i].text;
+                    var typeName=data[i].typeName;
+                    var accountId=data[i].accountId;
+                    var domain=data[i].accountDomain;
+                    var nickName=data[i].accountShowName;
+                    var face=createFaceUrl(accountId,'50x50');
+                    $('#newInfor').append(
+                    '<li>'+
+                        '<div class="pic"><img src="'+face+'" alt="" /></div>'+
+                        '<div class="des">'+
+                        '<i class="iMeg"><span class="mark"><a href="//my.pcbaby.com.cn/'+domain+'" target="_blank">'+nickName+'</a>'+typeName+'</span><span class="subMark">'+createTime+'</span></i>'+
+                        '<i class="iText">'+text+'</i>'+
+                        '</div>'+
+                        '</li>'
+                );
+                }
+                if(type==currentTypeAge){
+                    MAX_Number+=data.length;
+                }else{
+                    MAX_Number=0;
+                }
+                if(data.length<20||MAX_Number>30){
+                    $('#pMore').hide();
+
+                }else{
+                    $('#pMore').show();
+                    CURR_P++;
+                }
+            });
+
+        }
+</script>
+
+</div>
+<div class="contentdiv tbody"   style="display:block;">
+
+<div class="conTitle2">
+ <i>新鲜事分类：</i>
+ <i><span id=select_age><a href="javascript:void(0);" onclick="doNewsFeedSameAge(2);" id="age2">日记</a></span></i>
+ <i><a href="javascript:void(0);" onclick="doNewsFeedSameAge(3);" id="age3">相册</a></i>
+ <i><a href="javascript:void(0);" onclick="doNewsFeedSameAge(4);" id="age4">视频</a></i>
+ <i><a href="javascript:void(0);" onclick="doNewsFeedSameAge(7);" id="age7">快问</a></i>
+ <i><a href="javascript:void(0);" onclick="doNewsFeedSameAge(8);" id="age">论坛</a></i>
+<!--  <i><a href="javascript:void(0);" onclick="doNewsFeedSameAge(11);" id="age11">圈子</a></i> -->
+ <i><a href="javascript:void(0);" onclick="doNewsFeedSameAge(12);" id="age11">点评</a></i>
+</div>
+<div class="conTitle3">
+精彩内容天天看，<a href="//my.pcbaby.com.cn/mybabyadm/" target="_blank">部落管理员</a>为你新鲜奉上
+</div>
+<ul class="newInfor sameAge">
+<li id="caibian">
+<div class="pic"><img src="//i1.3conline.com/images/upload/upc/face/93/62/00/9/9362009_50x50" alt="亲子部落管理员" /></div>
+<div class="des">
+<script src="//www.pcbaby.com.cn/mykids/snsindex/1009/intf167.js"></script>
+</div>
+</li>
+</ul>
+<ul class="newInfor sameAge" id="newInforAge">
+</ul>
+<p class="pMore" id="pMoreAge" onclick="doNewsFeedSameAge(-1);">查看更多动态↓</p>  
+<script type="text/javascript">
+var CURR_P_AGE = 1;
+var currentTypeAge = 2;
+var MAX_NumberAge=0;
+function doNewsFeedSameAge(type){
+	var html=$("#select_age").html();
+	$("#select_age").after(html);
+	$("#select_age").remove();
+    $("#age"+type).wrap('<span id=select_age></span>');
+	if(type==-1){
+		type = currentTypeAge;
+	}
+	else{
+		CURR_P_AGE = 1;
+		currentTypeAge = type;
+		MAX_NumberAge=0;
+		$('#newInforAge').empty();
+	}	
+	var url="//my.pcbaby.com.cn/intf/getNewsfeeds_sameAge.jsp?cb=?&yyyymm=000000&pn="+CURR_P_AGE;
+	   if(type!=0){
+		   url+="&p="+type;
+		   }else{		
+				url=url+"&ps=";							
+			
+			  url=url+1;
+			  if(1<12){
+				  url+=",";
+				  }
+			
+			  url=url+2;
+			  if(2<12){
+				  url+=",";
+				  }
+			
+			  url=url+3;
+			  if(3<12){
+				  url+=",";
+				  }
+			
+			  url=url+4;
+			  if(4<12){
+				  url+=",";
+				  }
+			
+			  url=url+5;
+			  if(5<12){
+				  url+=",";
+				  }
+			
+			  url=url+6;
+			  if(6<12){
+				  url+=",";
+				  }
+			
+			  url=url+7;
+			  if(7<12){
+				  url+=",";
+				  }
+			
+			  url=url+8;
+			  if(8<12){
+				  url+=",";
+				  }
+			
+			  url=url+10;
+			  if(9<12){
+				  url+=",";
+				  }
+			
+			  url=url+11;
+			  if(10<12){
+				  url+=",";
+				  }
+			
+			  url=url+12;
+			  if(11<12){
+				  url+=",";
+				  }
+			
+			  url=url+9;
+			  if(12<12){
+				  url+=",";
+				  }
+			
+			   }
+		$.getJSON(url,function(data){	
+			var month="";
+			if(false){
+				month='';
+		      }
+			 for(var i=0; i<data.length; i++){				  
+			      var typeId=data[i].tpyeId;
+			      var createTime=data[i].createTime;
+			      var text=data[i].text;	
+			      var typeName=data[i].typeName;
+			      var accountId=data[i].accountId;
+			      var domain=data[i].accountDomain;	    
+			      var nickName=data[i].accountShowName;
+			      var face=createFaceUrl(accountId,'50x50');
+			     
+			      	
+			    	  $('#newInforAge').append(
+								 '<li>'+
+								 	'<div class="pic"><img src="'+face+'" alt="" />'+
+								 	'<i class="iBaby">'+month+'</i></div>'+
+								 	'<div class="des">'+
+								 	'<i class="iMeg"><span class="mark"><a href="//my.pcbaby.com.cn/'+domain+'" target="_blank">'+nickName+'</a>'+typeName+'</span><span class="subMark">'+createTime+'</span></i>'+
+								 	'<i class="iText">'+text+'</i>'+
+								 	'</div>'+
+								 '</li>'					 		
+								 );			       				 
+			 }	
+			 if(type==currentTypeAge){
+				 MAX_NumberAge+=data.length;
+					}else{
+						MAX_NumberAge=0;
+						}	
+			 if(data.length<20||MAX_NumberAge>100){				 
+			$('#pMoreAge').hide();
+			 
+			}else{
+				$('#pMoreAge').show();
+				CURR_P_AGE++;
+				
+				}
+			
+			});	
+		
+	}
+</script>
+</div>
+<div class="contentdiv tbody"  style="display:block;">
+<div class="conTitle">最新的热门活动</div>
+<script class=" defer" src="//www.pcbaby.com.cn/huodong/onlime/"></script>
+<div class="line"></div>
+<div class="hotThing">
+<div class="conTitle">正在进行的火爆话题</div>
+<script class=" defer" src="//www.pcbaby.com.cn/mykids/fz/000019826/"></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+
+	<div class="side">
+		<!-- 礼品兑换、总积分 -->
+		
+
+
+
+
+
+
+ 
+
+<div class="modBoxD" style="overflow:visible;">
+<div class="thD">
+<span class="mark">金币换礼</span>
+
+<span class="mark2">我的小金库：<em><i id="_st_totalSorce51222353"></i></em>金币</span>
+<span class="subMark2" onmouseover="document.getElementById('scoreK').className='scoreshow'" onmouseout="document.getElementById('scoreK').className='scorehide'">等级</span>
+
+</div>
+<div class="tbD score" style="overflow:visible;padding:10px 0">
+<div class="expPicA">
+
+今天没有可兑换的礼品哦.
+
+</div>
+<div id="scoreK" class="scorehide">
+<div class="integralNew scoreH" id="scoreH">
+<script>
+if(typeof jQuery !='function'){
+	   document.writeln("积分进度条需要jquery支持");
+}else{	
+//	document.writeln("<ul><li id=\"_st_bl51222353\"><span>部落魅力:</span><a class=\"degree green\" title=\"在亲子部落写日记等可以增加您的魅力\"><em style=\"width:0px;\"></em></a><span class=\"greenBox\" title=\"在亲子部落写日记等可以增加您的魅力\" id='#meili'>1级</span><i title=\"在亲子部落写日记等可以增加您的魅力\" class=\"meg\">0/100</i></li>");
+//	document.writeln("<li id=\"_st_kw51222353\" ><span>快问智力:</span><a class=\"degree blue\" title=\"在亲子快问提问回答等可以增加您的智力\"><em style=\"width:0px;\"></em></a><span class=\"orangeBox\" title=\"在亲子快问提问回答等可以增加您的智力\" id='#zhili'>1级</span><i title=\"在亲子快问提问回答等可以增加您的智力\" class=\"meg\">0/101</i></li>");
+	document.writeln("<ul><li id=\"_st_lt51222353\" ><span>积分:</span><a class=\"degree orange\" title=\"在论坛发帖回帖等可以增加您的积分\"><em style=\"width:0px;\"></em></a><span class=\"blueBox\" title=\"在论坛发帖回帖等可以增加您的积分\" id='#huoli'>1级</span><i title=\"在论坛发帖回帖等可以增加您的积分\" class=\"meg\">0/50</i></li><li id='grade'></li></ul>");
+//	
+	$(function(){
+ 		$.getJSON("//bbs.pcbaby.com.cn/util/user_score.jsp?ids=51222353&callback=?",function(data){
+			$.each(data, function(){
+				$("#_st_totalSorce51222353").html(this.score);
+                                //$("#_st_lt51222353").html("论坛积分："+this.contribution+" 等级："+this.title);
+				setContent($("#_st_lt51222353"),this.level,this.title,this.totalLevel,this.contribution,this.next)
+			});
+		});
+//		
+//		$.getJSON("//my.pcbaby.com.cn/intf/user_info.jsp?ids=51222353&callback=?",function(data){
+//			$.each(data.accounts, function(){
+//				setContent($("#_st_bl51222353"),this.rank,this.topRank,this.experience,this.nextExperience)
+//			});
+//		});
+//	
+//		$.getJSON("//k.pcbaby.com.cn/template/pcbaby/intf/user_experience.jsp?ids=51222353&callback=?",function(data){		
+//			$.each(data.accounts, function(){
+//				setContent($("#_st_kw51222353"),this.rank,this.topRank,this.experience,this.nextExperience)
+//			});
+//		});
+	})				
+}
+
+
+function setContent(oj,level,title,totalLevel,experience,nextExperience){
+	if(oj.length==0 || totalLevel == 0 || nextExperience == 0){
+		return;
+	}
+	var width = 150; 
+	var r = experience/nextExperience;
+ 	//oj.find("a").attr("title","完成"+(Math.round(r*100))+"%");
+ 	oj.find("em").width(width*r);
+ 	oj.find("a + span").html(""+level+"级");
+ 	oj.find("i").html(""+experience+"/"+nextExperience); 
+ 	$(oj.find("a + span").attr("id")).html(""+level+"级");
+	$("#grade").html("<span>级别:</span>"+title);
+}
+</script>
+</div>
+</div>
+
+</div>
+<div class="tbt"></div>
+</div>
+
+
+        <!-- 订阅孕育周刊-->
+        
+        <!-- 领取积分，积分任务 -->
+		
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+<script>
+function editAlbum(){
+	if(true){
+		alert("请先完成您的邀请任务");
+	}else{
+		window.open('//my.pcbaby.com.cn/play/printAlbum/baby/chooseTemplate.jsp?name=');
+	}
+}
+function getGoodsGift(){
+	if(true){
+		alert("请先完成您的邀请任务");
+	}
+	else{
+		if(false){
+			PCDialog.open("我的邀请有礼","iframe:/play/printAlbum/baby/action/getGoodsGift.jsp","550","290");
+		}
+	}
+}
+function checkDetail(){
+	PCDialog.open("我的邀请详情","iframe:/play/printAlbum/baby/action/checkDetail.jsp","450","200");
+}
+</script>
+<div class="modBoxD">
+<div class="thD">
+<span class="mark">你今天完成了吗？</span>
+</div>
+<div class="tbD">
+<div class="yqBox">
+
+<div id="dPop" class="dPop" style="display: none;"></div>
+
+<!-- 开始有礼结束 -->
+
+<!-- 积分任务开始 -->
+<ul class="mList">
+    <!-- 领取积分 -->
+
+	<!-- 积分任务 -->
+	
+			<li ><i class="mListL"><a href="//my.pcbaby.com.cn/user/jobDetail.jsp?id=60" title="活力小作家">活力小作家</a></i><i class="mListR">30个积分</i></li>
+		
+			<li ><i class="mListL"><a href="//my.pcbaby.com.cn/user/jobDetail.jsp?id=26" title="快乐小文豪">快乐小文豪</a></i><i class="mListR">20个积分</i></li>
+		
+			<li ><i class="mListL"><a href="//my.pcbaby.com.cn/user/jobDetail.jsp?id=86" title="用品天天评">用品天天评</a></i><i class="mListR">50个积分</i></li>
+		
+			<li ><i class="mListL"><a href="//my.pcbaby.com.cn/user/jobDetail.jsp?id=37" title="健康答人">健康答人</a></i><i class="mListR">50个积分</i></li>
+		
+</ul>
+<i class="mMore"><a href="//my.pcbaby.com.cn/user/job.jsp" title="更多积分任务">更多任务&gt;&gt;</a></i>
+</div>
+</div>
+<div class="tbt"></div>
+</div>
+
+		<!-- 我的访客、我的足迹 -->
+		
+
+
+
+
+
+
+ 
+
+<div class="modBoxD">
+<div class="thD">
+<span class="mark">最近访客</span>
+<span class="subMark"><a href="//my.pcbaby.com.cn/user/visitor.jsp" target="_blank">查看更多>></a></span>
+</div>
+<div class="tbD">
+<ul class="piclist">
+
+	建设小家加好友，开始互访吧！<br>
+	<a href="//my.pcbaby.com.cn/user/friendMayKnow.jsp">更多你可能认识的人</a>
+
+</ul>
+</div>
+<div class="tbt"></div>
+</div>
+
+		<!-- 达人-->
+		
+<script charset="gbk" type="text/javascript">
+function noFollow(acId,box){
+	parent.PCDialog2.open('取消关注','iframe:/user/star/action/nozhuisui.jsp?box='+box+'&acid='+acId+'&return=/user/star/star_hotpeople.jsp','400','182');
+	return false;
+}
+
+function follow(acId,box){
+ 
+jQuery.ajax({ 
+      url: "/user/star/action/follow.jsp",
+      type: "POST",
+      data: {acid: acId},
+      cache: false, 
+      success: function(data){
+        if(data.indexOf("ok")==1){
+        	parent.PCDialog2.open("关注","iframe:/user/star/action/zhuisuiok.jsp?bol=1&box="+box+"&acid="+acId,"400","182");
+        }else if(data.indexOf("ac")==1){
+        	parent.PCDialog.open("关注","iframe:/user/star/action/zhuisuiok.jsp?bol=2&box="+box+"&acid="+acId,"400","182");
+        }else if(data.indexOf("login")==1){
+        	parent.PCDialog2.open("请先登录","iframe:/_login.jsp?ref=bbs&openType=_parent","450","220");
+        }else{
+        	parent.PCDialog2.open("关注","iframe:/user/star/action/zhuisuiok.jsp?bol=0&box="+box+"&acid="+acId,"400","182");
+        }
+        return false;
+      }
+    });
+}
+</script>
+<div class="modBoxD">
+<div class="thD">
+<span class="mark">部落达人</span>
+<span class="subMark"><a href="//my.pcbaby.com.cn/user/star/star_hotpeople.jsp" target="_blank">查看更多>></a></span>
+</div>
+<div class="tbD">
+<ul class="buluo">
+
+<li>
+<i class="iPic"><a href="//my.pcbaby.com.cn/7652751/" target="_blank"><img alt="a胖妞i土豆" src="//i1.3conline.com/images/upload/upc/face/76/52/75/1/7652751_50x50" /></a></i>
+<p class="pTit"><i class="icon"></i><i class="iName"><a href="//my.pcbaby.com.cn/7652751/" target="_blank">a胖妞i土豆</a></i></p>
+<p class="pCat">分类: <a href="star_hotpeople.jsp?typeId=3" target="_blank">营养美食达人</a></p>
+<p class="pLink">
+
+<a href="#"  onclick="follow(7652751,0);return false;">关注</a>
+
+</p>
+</li>
+
+<li>
+<i class="iPic"><a href="//my.pcbaby.com.cn/11457199/" target="_blank"><img alt="p双儿妈妈" src="//i1.3conline.com/images/upload/upc/face/11/45/71/99/11457199_50x50" /></a></i>
+<p class="pTit"><i class="icon"></i><i class="iName"><a href="//my.pcbaby.com.cn/11457199/" target="_blank">p双儿妈妈</a></i></p>
+<p class="pCat">分类: <a href="star_hotpeople.jsp?typeId=2" target="_blank">摄影旅游达人</a></p>
+<p class="pLink">
+
+<a href="#"  onclick="follow(11457199,0);return false;">关注</a>
+
+</p>
+</li>
+
+</ul>
+
+</div>
+<div class="tbt"></div>
+</div>
+		<!-- 免费试用 -->
+		
+
+
+
+
+
+
+
+
+ 
+
+<div class="modBoxD">
+    <div class="thD">
+        <span class="mark">免费试用</span>
+        <span class="subMark"><a href="//try.pcbaby.com.cn" target="_blank">查看更多>></a></span>
+    </div>
+    <div class="tbD">
+        <ul class="freeT">
+            
+                    最近没有免费试用哦.
+                
+
+        </ul>
+    </div>
+    <div class="tbt"></div>
+</div>
+	</div>
+	</div>
+
+</div>
+<!-- 页脚 -->
+
+<script class=" defer" src="//www.pcbaby.com.cn/global/footer/index.html"></script>
+</div>
+
+<script>
+		function openIframe(){
+			var stepClose = document.getElementById("stepClose");
+			var stepOpen = document.getElementById("stepOpen");
+			stepClose.style.display="none";
+			stepOpen.style.display="";
+				
+					$("#iframeStep",parent.document.body).attr("src","accountLogo_iframe.jsp");
+				
+			$("#topWarp").before('<div id="alphaBg"></div>');
+			$("#alphaBg").height(document.body.offsetHeight);
+		}
+</script>
+
+		<div id="topWarp">
+		<div class="topDiv" >
+		
+		<a href="//my.pcbaby.com.cn/user/accountInfo.jsp"  class="openLink"></a></div>
+  </div>
+        
+
+
+<!--
+添加挂饰开始
+-->
+<script>
+if(false){
+(function(){
+	//挂饰
+    var URL="http://ebooafa7.allyes.com/main/adfclick?db=ebooafa7&bid=10032,4985,110&cid=5060,585,1&sid=10131&show=ignore&url=http://www.c5.citroen.com.cn/",SRC="#340x311#bgiframe=1", SRC2="{SRC2}";
+    var w = 1*SRC.replace(/^.*#(\d+)x(\d+).*$|^.*$/,'$1'); if(w<1)w=400;
+    var h = 1*SRC.replace(/^.*#(\d+)x(\d+).*$|^.*$/,'$2'); if(h<1)h=300;
+    var delay = 1*SRC.replace(/^.*#delay=(\d+).*$|^.*$/,'$1');
+    var id="35888"; //SRC.replace(/^.*#id=(\d+).*$|^.*$/,'$1');
+    var float=10; //浮标
+    var fcolor = SRC2.replace(/^.*#color=(\w+).*$|^.*$/,'$1');//重播和关闭文字颜色
+    var bgcolor = SRC2.replace(/^.*#bgcolor=(\w+).*$|^.*$/,'$1');//重播和关闭按钮背景颜色
+	var color = fcolor==""?"color:#fff;":"color:#"+fcolor+";";
+	var delayStart = 1*SRC.replace(/^.*#delayStart=(\w+).*$|^.*$/,'$1'); if(!(delayStart>0))delayStart=1;
+	color += bgcolor==""?"background-color:#000;":"background-color:#"+bgcolor+";";
+
+
+    var hasSmall = SRC2!='{'+'SRC2}';
+    var s1 = "<span id=replay_"+id+" onclick=\"showRichMedia"+id+"()\" style='cursor:pointer;"+color+(float>0?"":"display:none;")+"position:absolute;font-size:12px;text-decoration:none;padding:1px;"+(float>0?"left:0":"right:0;")+"'>重播</span>"+
+        (float<1?"":"<span onclick=\"hideRichMedia"+id+"();this.offsetParent.style.display='none'\" style='cursor:pointer;position:absolute;right:0;"+color+"font-size:12px;text-decoration:none;padding:1px;'>关闭</span>");
+    var s2 = ivyHTML4PicOrFlash(SRC2,URL);
+    var small = float>0 ? s2+"<br><div style='position:absolute;width:80px;"+color+"font-size:14px;'>&nbsp;</div>"+s1 : s1+s2;
+
+    var swf = "<span onclick=\"hideRichMedia"+id+"()\" style='cursor:pointer;margin-top:2px;margin-left:"+(w-30)+"px;position:absolute;"+color+"font-size:12px;text-decoration:none;padding:2px;filter: Alpha(Opacity=80);Opacity:0.8;-moz-opacity:0.8;'>关闭</span>"
+        +ivyHTML4PicOrFlash(SRC+'#transparent',URL);
+
+    document.writeln("<div id=richmedia"+id+" style='z-index:999;bottom:0;right:0px;display:none;"+
+        (!/MSIE/.test(navigator.appVersion) || /MSIE [7-9]/.test(navigator.appVersion)&&/CSS1Compat/.test(document.compatMode) ? 'position:fixed' : 'position:absolute;top:expression(/CSS1Compat/.test(document.compatMode) ? documentElement.scrollTop + documentElement.clientHeight - this.clientHeight: document.body.scrollTop + document.body.clientHeight - this.clientHeight)')+
+        "'>"+swf+"</div>");
+
+    if(hasSmall) document.writeln( //有素材2
+        "<div id=richmedia_small"+id+" style='z-index:999;bottom:20px;right:0px;display:none;"+
+		(!/MSIE/.test(navigator.appVersion) || /MSIE [7-9]/.test(navigator.appVersion)&&/CSS1Compat/.test(document.compatMode) ? 'position:fixed' : 'position:absolute;top:expression(/CSS1Compat/.test(document.compatMode) ? documentElement.scrollTop + documentElement.clientHeight - this.clientHeight-20: document.body.scrollTop + document.body.clientHeight - this.clientHeight-20)')+
+        "'>"+ small +"</div>");
+
+var timer = null;
+//show...()中有定时器。if(delay>0) timer=setTimeout("hideRichMedia"+id+"()",(delayStart+delay)*1000);
+
+window['showRichMedia'+id]=function() {
+    var div=document.getElementById('richmedia'+id);
+    div.innerHTML=swf;
+    div.style.display='block';
+    if(delay>0) timer=setTimeout("hideRichMedia"+id+"()",delay*1000);
+    if(!window.XMLHttpRequest && window.jQuery && window.jQuery.fn && window.jQuery.fn.bgiframe) window.jQuery('#richmedia'+id+',#richmedia_small').bgiframe();//解决IE6下拉框遮盖问题
+
+    if(hasSmall) document.getElementById((float?'richmedia_small':'replay_')+id).style.display='none';
+}
+
+window['hideRichMedia'+id]=function() {
+    var big=document.getElementById('richmedia'+id);
+    if(big.style.display=='none') return;
+    big.style.display='none';
+
+    if(!hasSmall) return;
+    document.getElementById((float?'richmedia_small':'replay_')+id).style.display='';
+    clearTimeout(timer);
+}
+
+/*解决 延时 开始*/
+setTimeout(window['showRichMedia'+id],delayStart*1000);
+
+/** 常规广告，无特殊效果控制。key为位置标识, placeHolderId为占位标记，可不给出 */
+function ivyHTML4PicOrFlash(SRC,URL,id) {
+    if(typeof id=='undefined') id='';
+    if(!SRC.match(/\.swf/i)) { //pic
+        return '<a id="'+id+'" target=_blank href="'+URL+'"><img border=0 src="'+SRC+'"></a>';
+    }
+
+    var w = 1*SRC.replace(/^.*#(\d+)x(\d+).*$|^.*$/,'$1'); if(w<1)w=950;
+    var h = 1*SRC.replace(/^.*#(\d+)x(\d+).*$|^.*$/,'$2'); if(h<1)h=90;
+    var trans = /#transparent/i.test(SRC);
+    SRC = SRC.replace(/#.*$/,'');
+
+    return '<EMBED src='+SRC+' WIDTH='+w+' HEIGHT='+h+
+    ' wmode='+(trans?'transparent':'opaque')+
+    ' allowscriptaccess=always TYPE=application/x-shockwave-flash PLUGINSPAGE=http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash></EMBED>';
+} //ivyHTML4PicOrFlash()
+})();
+}
+</script>
+
+<script type="text/javascript">
+/*消息推送，每隔15秒推一次*/
+	jQuery(function(){
+		function getMsg(){
+			getMsgCount("","1");
+			hasLoaded = false;
+			unreadTotalCount = 0;
+			showMsgStep=0;
+			showMsgTimeStep=0;
+			window.setTimeout(getMsg, 15000);
+		}
+		window.setTimeout(getMsg, 15000);
+	})
+</script>
+
+
+
+
+
+
+
+<script>if(!window._addIvyID)document.write("<script src=//www.pconline.com.cn/_hux_/baby/sns/index.js><\/script>")</script> 
+<!--栏目计数器 --> 
+<span class="spanclass"> 
+<script>document.write("<img src=//count.pcbaby.com.cn/count.php?channel=299&screen="+screen.width+"*"+screen.height+"&refer="+encodeURIComponent(document.referrer)+'&anticache='+new Date().getTime()+'&url='+encodeURIComponent(location.href)+" border=0 width=0 height=0>");</script>
+</span>
+<!-- 监控代码 -->
+<script type="text/javascript">
+-function(ch,chout,now,ck,chf){ now=1*now||1*new Date();
+function run(s){try{s=s.data||s;if(s.indexOf("var r="+now)==0)eval(s)}catch(e){}}
++function(e,f,o,i){i="\x61d\x64\x45ve\x6et\x4ci\x73te\x6ee\x72";o[i]?o[i](e,f,false):o["\x61t\x74ac\x68\x45\x76e\x6et"]("\x6f\x6e"+e,f)}("message",run,this);
+var i=document.createElement("div"); i.innerHTML="\x3cifra\x6de\x20i\x64="+now+"\x20\x73\x74y\x6ce=di\x73p\x6cay:\x6eo\x6ee\x20s\x72c=\x22\x2f\x2fcou\x6et\x36\x2epc\x6fn\x6cine\x2eco\x6d\x2ecn\x2fp\x63suv\x2e\x68tm\x22\x20\x6ea\x6de=\x22ifr:"+now+",ch:"+ch+(chout?",chout:"+chout:"")+(chf?",chf:"+chf:"")+(ck?",c\x6fo\x6bie:"+ck:"")+"\x22>\x3c\x2fi\x66ra\x6de\x3e";
+(i=i.firstChild).onreadystatechange=function(){run(navigator[now],navigator[now]=this.undefined)};
+document.getElementsByTagName("head")[0].appendChild(i); 
+}(-1,5050+517);
+</script>
+<script>_submitIvyID();</script>
+
+
+
+
+
+<!--===============点击检测代码开始================-->
+<script type="text/javascript"
+	src="//www1.pconline.com.cn/heatmap/heatmap.js"></script>
+<!--===============点击检测代码结束================-->
+
+</body>
+</html>
